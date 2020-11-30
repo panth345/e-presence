@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TeacherLogin">
+
+    <LinearLayout
+        android:id="@+id/welcomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="380px"
+        android:layout_marginTop="38px"
+        android:background="@drawable/welcome_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="218dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="200px"
+            android:layout_marginTop="10px"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/nameStudentTextViewFromDataBase"
+            android:layout_width="218dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="200px"
+            android:layout_marginTop="10px"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="45sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/chooseSubjectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/totalAbsentTextView"
+            android:layout_width="195dp"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/totalPresentTextView"
+            android:layout_marginBottom="150dp"
+            android:text="Total Absent: "
+            android:textAlignment="textStart"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalPresentTextView"
+            android:layout_width="195dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="22dp"
+            android:text="Total Present: "
+            android:textAlignment="textStart"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalLeavesTextView"
+            android:layout_width="195dp"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/totalAbsentTextView"
+            android:layout_marginBottom="103dp"
+            android:text="Total Leaves: "
+            android:textAlignment="textStart"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chooseSubjectTextView"
+            android:layout_width="195dp"
+            android:layout_height="33dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="11dp"
+            android:text="Choose Subject:"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/occupationSpinner"
+            android:layout_width="347dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="51dp"
+            android:background="@drawable/corner_layout" />
+
+        <Button
+            android:id="@+id/showSubjectDetailsButton"
+            android:layout_width="165dp"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/occupationSpinner"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="29dp"
+            android:background="@drawable/button_bg"
+            android:text="Show Details"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/okayButton"
+            android:layout_width="192dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/button_bg"
+            android:text="OKAY"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/button_bg"
+            android:text="Go Back"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>

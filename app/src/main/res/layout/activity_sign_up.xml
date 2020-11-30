@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".SignUp">
+
+    <TextView
+        android:id="@+id/signupTextView"
+        android:layout_width="184dp"
+        android:layout_height="67dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Signup"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textIsSelectable="false"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <Spinner
+        android:id="@+id/occupationSpinner"
+        android:layout_width="349dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/corner_layout"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/studentSignupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/occupationSpinner"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/row0"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+
+            <TextView
+                android:id="@+id/space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+
+            <TextView
+                android:id="@+id/rollNoLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Univ. Roll Number"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/rollNoEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="text|number"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/phoneLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Phone No."
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/PhoneEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="text|phone"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/batchLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Batch"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/batchSpinner"
+                android:layout_width="200dp"
+
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tradeLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Trade"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/tradeSpinner"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row7"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/genderLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Gender"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/maleRadioButton"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/femaleRadioButton"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/teacherPasswordLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Password"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row9"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/confirmPasswordLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Confirm Password"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/row10"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <Button
+                android:id="@+id/signupButton"
+                android:layout_width="180dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/button_bg"
+                android:text="SignUp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+<LinearLayout
+        android:id="@+id/teacherSignupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/occupationSpinner"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+
+
+    <LinearLayout
+        android:id="@+id/trow0"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical|center_horizontal">
+
+
+        <TextView
+            android:id="@+id/tspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trow1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+
+            <TextView
+                android:id="@+id/teacherNameLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/teacherNameEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trow2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+
+            <TextView
+                android:id="@+id/teacherEmailLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/teacherEmailEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trow3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/teacherPhoneLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Phone No."
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/teacherPhoneEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="text|phone"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/trow4"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/teacherGenderLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Gender"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/teacherRadioGroup"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/maleTeacherRadioButton"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/femaleTeacherRadioButton"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/trow5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/teacherDepartmentLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Department"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/teacherDepartmentSpinner"
+                android:layout_width="200dp"
+
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/trow6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/teacherPasswordLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Password"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/teacherPasswordEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/trow7"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/teacherConfirmPasswordLabel"
+                android:layout_width="140dp"
+                android:layout_height="20dp"
+                android:text="Confirm Password"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/teacherConfirmPasswordEditText"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:background="@drawable/corner_layout"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/trow8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <Button
+                android:id="@+id/teacherSignupButton"
+                android:layout_width="180dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/button_bg"
+                android:text="SignUp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
